@@ -41,7 +41,7 @@ class Encoder(nn.Module):
                 embed_dim, self.feat_dim if self.gcn else 2 * self.feat_dim
             )
         )
-        init.xavier_uniform(self.weight)
+        init.xavier_uniform_(self.weight)
 
     def forward(self, nodes):
         """
